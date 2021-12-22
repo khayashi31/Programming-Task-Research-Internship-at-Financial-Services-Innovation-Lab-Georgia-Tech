@@ -1,7 +1,10 @@
 
 # Georgia Tech Financial Services Innovation Lab Reasearch Internship Programming Task
 
-This program is split into two parts: 1. Downloads 10 random 8-Ks for each year-quarter from the SEC website for the time period 1995:Q1 through 2021:Q4. 2. Performs a rudimentary sentiment analysis and generates sentiment score and time-series plot.
+This program is split into two parts: 
+
+1. Downloads 10 random 8-Ks for each year-quarter from the SEC website for the time period 1995:Q1 through 2021:Q4. 
+2. Performs a rudimentary sentiment analysis and generates sentiment score and time-series plot.
 
 
 
@@ -10,8 +13,8 @@ This program is split into two parts: 1. Downloads 10 random 8-Ks for each year-
 1. This program was created to run on Mac OS and python 3.10.1.
 
 2. Download data and python dependencies, confirming that they are in the same folder as the program. (KEEP DEFAULT NAMES FOR DEPENDENCIES)
-Link to data file with LM Dictionary: https://drive.google.com/file/d/1moS1tkh_AJafpcIFpktaSvZwrzv5d4ix/view
-Link to module to load Loughran-Mcdonald master dictonary: https://drive.google.com/file/d/1yfRFGfRkJ5rSwDwH-QNB3DjaKxCUeJeR/view
+- Link to data file with LM Dictionary: https://drive.google.com/file/d/1moS1tkh_AJafpcIFpktaSvZwrzv5d4ix/view
+- Link to module to load Loughran-Mcdonald master dictonary: https://drive.google.com/file/d/1yfRFGfRkJ5rSwDwH-QNB3DjaKxCUeJeR/view
 
 ## Installation
 
@@ -66,6 +69,19 @@ The program will perform the following tasks in order.
     ![time_and_sentiment_score](https://user-images.githubusercontent.com/96277691/147013266-55cc12d3-d917-46cd-b60f-c5e3b36591ab.jpg)
 
 7. More descriptive statistics for the sentiment measure calculated can be found in the file "Parser.csv" which can be located in the same folder as the program. "Parser.csv" contains basic %positve/negative words along with additional statistics such as %constraining, %strong/weak modal, %litigious, etc. 
+
+
+
+## Thought Process and Challenges
+
+### Selecting and Downloading 10 random 8-K filings
+- The third step in this program involved reading through the .idx files, filtering them to keep only the 8-K filings, and extracting/downloading 10 random companies' 8-K filings for each year-quarter. This job is done by the function "eightKdownloader." Filtering through the .idx files takes a relatively long amount of time even when using regex. Still, regex seems to be the fasted and most efficient way to conduct the action.
+
+### Nested Functions
+- This program uses nested/inner functions in the "produceStats" function. This was done since the functions "main" and "get_data" required direct access to variables such as "MASTER_DICTIONARY_FILE" and "OUTPUT_FILE" defined in the enclosing function. Additionally, this allows "produceStats" to be run independently on any set of cleaned data files without having to run the whole program. 
+
+### Pickle File
+- This program saves the cleaned text files as .pkl files. This was done to increase efficiency: Since the cleaned text files are not meant to be analyzed manually by humans, its main purpose is to be reloaded back into the program. Therefore, serialization was a better option then rewriting the cleaned text onto a .txt file and reading it back into the program later. 
 
 
 
