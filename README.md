@@ -90,3 +90,10 @@ The program will perform the following tasks in order.
 ## Credits
 
 "produceStats", the function used to parse through the cleaned data and produce a time-series plot modifies a parser program taken from the University of Notre Dame's Software Repository for Accounting and Finance. The original program can be found through this link: https://sraf.nd.edu/textual-analysis/code/
+
+
+
+
+## Contact
+
+For any questions or concerns, please contact me at: khayashi31@gatech.edu
