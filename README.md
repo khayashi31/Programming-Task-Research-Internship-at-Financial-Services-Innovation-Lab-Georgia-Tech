@@ -64,9 +64,11 @@ The program will perform the following tasks in order.
 
 5. If answered "yes" when prompted "Perform rudimentary sentiment analysis on sample data?" the program will being to clean all of the downloaded 8-Ks to reduce noise. The cleaned text is saved as a pickle and can be found in the folder named "cleaned_txt." Then it will compute sentiment scores for each 8-K filings using a bag-of-words approach. 
 
-6. The program will produce a sentiment score and time-series plot as shown below.
+6. The program will produce a sentiment score and time-series plot as shown below. (From two different randomized samples)
 
     ![time_and_sentiment_score](https://user-images.githubusercontent.com/96277691/147013266-55cc12d3-d917-46cd-b60f-c5e3b36591ab.jpg)
+    ![time_and_sentiment_score](https://user-images.githubusercontent.com/96277691/147018282-3d98d331-ecb1-49b0-a349-37d65f4f7f38.jpg)
+
 
 7. More descriptive statistics for the sentiment measure calculated can be found in the file "Parser.csv" which can be located in the same folder as the program. "Parser.csv" contains basic %positve/negative words along with additional statistics such as %constraining, %strong/weak modal, %litigious, etc. 
 
