@@ -1,5 +1,5 @@
 
-# Georgia Tech Financial Services Innovation Lab Reasearch Internship Programming Task
+# Georgia Tech Financial Services Innovation Lab Research Internship Programming Task
 
 This program is split into two parts: 
 
