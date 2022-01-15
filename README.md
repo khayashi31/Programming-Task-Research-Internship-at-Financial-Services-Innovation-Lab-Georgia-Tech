@@ -1,5 +1,5 @@
 
-# Georgia Tech Financial Services Innovation Lab Research Internship Programming Task
+# SEC-EDGAR Randomized 8-K Sentiment Analysis 
 
 This program is split into two parts: 
 
